@@ -19,5 +19,21 @@ public class CalculatorParserTest {
         
         assertEquals(1, res);
     }
+    @Test
+    public void TestOneNumber2(){
+        String operation = "2";
+
+        int res = calculator.parse(operation);
+        
+        assertEquals(2, res);
+    }
+    @Test
+    public void TestOneNumber3(){
+        String operation = "3";
+
+        int res = calculator.parse(operation);
+        
+        assertEquals(3, res);
+    }
 
 }
