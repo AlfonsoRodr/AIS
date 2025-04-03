@@ -35,5 +35,30 @@ public class CalculatorParserTest {
         
         assertEquals(3, res);
     }
+    @Test
+    public void TestSubstractNumber1(){
+        String operation = "5 - 3";
 
+        int res = calculator.parse(operation);
+        
+        assertEquals(2, res);
+    }
+    @Test
+    public void TestSubstractNumber2(){
+        String operation =  "1 - 2" ;
+
+        int res = calculator.parse(operation);
+        
+        assertEquals(-1, res);
+    }
+    @Test
+    public void TestSubstractNumber3(){
+        String operation =  "7 - 2 - 1" ;
+
+        int res = calculator.parse(operation);
+        
+        assertEquals(4, res);
+    }
+
+   
 }
