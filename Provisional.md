@@ -1,5 +1,8 @@
 # Provisional
 
+>[!NOTE]
+> Since all tests are intended to test the functionality of a single method, the refactoring of both the tests and the parser method will be shown in a separate section, showing the refactorings together along with proof that all the tests pass.
+
 ## Expresion with Letters Test
 
 ### Test Code
@@ -38,7 +41,7 @@ public int parse(String expression) {
 ````
 
 ### Every Test Pass
-INSERTAR FOTO
+![Expression with Letters Test](Pictures/ExpressionWithLetters.png)
 
 ## Expression with Multiple Letters Test
 ### Test Code
@@ -77,7 +80,7 @@ public int parse(String expression) {
 ````
 
 ### Test Pass
-INSERTAR FOTO
+![Expresion with Multiple Letters Test](Pictures/ExpressionWithMultipleLetters.png)
 
 ## Mix Numbers and Letters Test
 ### Test Code
@@ -133,7 +136,7 @@ public int parse(String expression) {
 }
 ````
 ### Test Pass
-INSERTAR FOTO AQUÍ
+![Mix Numbers and Letters Test](Pictures/MixNumbersWithLetters.png)
 
 ## Artimethic Sum Test
 ### Test Code
@@ -177,7 +180,7 @@ public int parse(String expression) {
 ````
 
 ### Test Pass
-INSERTAR FOTO AQUÍ
+![Arithmetic Sum Test](Pictures/ArithmethicSumTest.png)
 
 ## Invalid Arithmetic Sum Test
 ### Test Code
@@ -197,4 +200,6 @@ public void invalidAritmethicSumTest() {
 > Since this case has been addressed in the [Expression with Multiple Letters Test](#expression-with-multiple-letters-test), the test passes without implementing any functionality.
 
 ### Test Pass
-INSERTAR FOTO AQUÍ
+![Invalid Arithmetic Sum Test](Pictures/InvalidArithmeticSumTest.png)
+
+## Refactorization
