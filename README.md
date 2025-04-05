@@ -173,7 +173,7 @@ public void arithmeticSumTest() {
 ````
 ### Test Error Message
 ````log
-java.lang.NumberFormatException: For input string: "5+3"
+java.lang.NumberFormatException: For input string: "5+3+6+8"
  at java.base/java.lang.NumberFormatException.forInputString(Unknown Source)
  at java.base/java.lang.Integer.parseInt(Unknown Source)
  at java.base/java.lang.Integer.parseInt(Unknown Source)
