@@ -1,10 +1,13 @@
 package es.codeurjc.test;
 
+import static org.junit.jupiter.api.Assertions.assertDoesNotThrow;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.ValueSource;
 
 public class CalculatorParserTest {
     private  CalculatorParser calculator ;
@@ -24,50 +27,43 @@ public class CalculatorParserTest {
         assertEquals(1, res);
     }
 
-    @Test
-    @DisplayName("When receiving an expression with a letter, a NumberFormatException should be thrown")
-    public void singleLetterTest() {
-        String operation = "A";
+    @ParameterizedTest
+    @ValueSource(strings = {"A", "Hello", "19283939AB726X6", "4+3+A+7+C+88+BB", "987-145-A", "5-4+34-9+B-ABA"})
+    @DisplayName("Invalid expressions should throw NumberFormatException with correct message")
+    public void testInvalidExpressions(String operation) {
         NumberFormatException thrown = assertThrows(NumberFormatException.class, () -> {
             this.calculator.parse(operation);
-        });
-        assertEquals(ERROR_MESSAGE, thrown.getMessage());
+        }); 
+        assertEquals(ERROR_MESSAGE, thrown.getMessage(),"Exception message did not match expected.");
     }
 
     @Test
-    @DisplayName("When receiving an expression with multiple letters, a NumberFormatException should be thrown")
-    public void multipleLettersTest() {
-        String operation = "Hello";
-        NumberFormatException thrown = assertThrows(NumberFormatException.class, () -> {
-            this.calculator.parse(operation);
-        });
-        assertEquals(ERROR_MESSAGE, thrown.getMessage());
-    }
-
-    @Test
-    @DisplayName("When receiving an expression that mixes numbers and letters, a NumberFormatException should be thrown.")
-    public void mixNumbersAndLettersTest() {
-        String operation = "19283939AB726X6";
-        NumberFormatException thrown = assertThrows(NumberFormatException.class, () -> {
-            this.calculator.parse(operation);
-        });
-        assertEquals(ERROR_MESSAGE, thrown.getMessage());
-    }
-
-    @Test
-    @DisplayName("When receiving an arithmethic sum, the result of said sum should be returned")
-    public void arithmeticSumTest() {
+    @DisplayName("Arithmetic sum should return correct result")
+    public void testArithmeticSum() {
         String operation = "5+3+6+8";
-        assertEquals(22, this.calculator.parse(operation));
+        assertDoesNotThrow(() -> {
+            this.calculator.parse(operation);
+        });
+        assertEquals(22, calculator.parse(operation));
     }
 
     @Test
-    @DisplayName("When receiving an invalid format for an arithmethic sum, the result of said sum should be returned")
-    public void invalidAritmethicSumTest() {
-        String operation = "4+3+A+7+C+88+BB";
-        NumberFormatException thrown = assertThrows(NumberFormatException.class, () -> {
+    @DisplayName("Arithmetic subtraction should return correct result")
+    public void testArithmeticSubtraction() {
+        String operation = "10-3-2";
+        assertDoesNotThrow(() -> {
+            calculator.parse(operation);
+        });
+        assertEquals(5, calculator.parse(operation));
+    }
+
+    @Test
+    @DisplayName("Mixed operations (addition and subtraction) should return correct result")
+    public void testMixedOperations() {
+        String operation = "10+5-2";
+        assertDoesNotThrow(() -> {
             this.calculator.parse(operation);
         });
-        assertEquals(ERROR_MESSAGE, thrown.getMessage());
+        assertEquals(13, calculator.parse(operation));
     }
 }
