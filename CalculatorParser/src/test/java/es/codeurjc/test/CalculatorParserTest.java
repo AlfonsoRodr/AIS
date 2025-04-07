@@ -10,14 +10,16 @@ import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.ValueSource;
 
 public class CalculatorParserTest {
-    private  CalculatorParser calculator ;
+    
+    private  CalculatorParser calculator;
 
     private static final String ERROR_MESSAGE = "The expression received is not a number.";
 
     @BeforeEach
-    public void setup(){
+    public void setup() {
         calculator = new CalculatorParser();
     }
+
     @Test
     public void oneNumberTest(){
         String operation = "1";
