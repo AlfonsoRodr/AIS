@@ -226,3 +226,113 @@ public void invalidAritmethicSumTest() {
 ![Invalid Arithmetic Sum Test](Pictures/InvalidArithmeticSumTest.png)
 
 ## Refactorization
+Next, we will show the refactorings that were made in the `CalculatorParser` class and in `CalculatorParserTest`.
+>[!NOTE]
+> These refactorings were made using the AI ​​integrated into GitHub's Visual Studio as a tool.
+
+### Invalid expressions Test
+For this refactoring, all tests that were tasked with testing expressions containing one or more letters were grouped together. To achieve this, a Parameterized Test was used, where a single test can test various scenarios.
+
+```java
+@ParameterizedTest
+@ValueSource(strings = {"A", "Hello", "19283939AB726X6", "4+3+A+7+C+88+BB", "987-145-A", "5-4+34-9+B-ABA"})
+@DisplayName("Invalid expressions should throw NumberFormatException with correct message")
+public void testInvalidExpressions(String operation) {
+      NumberFormatException thrown = assertThrows(NumberFormatException.class, () -> {
+            this.calculator.parse(operation);
+      }); 
+      assertEquals(ERROR_MESSAGE, thrown.getMessage(),"Exception message did not match expected.");
+}
+````
+
+### Arithmetic Sum Test
+In this refactoring, what was added was an additional check, where it was verified that a correctly formed expression did not throw the exception of type `NumberFormatException`.
+
+```java
+@Test
+@DisplayName("Arithmetic sum should return correct result")
+public void testArithmeticSum() {
+      String operation = "5+3+6+8";
+      assertDoesNotThrow(() -> {
+            this.calculator.parse(operation);
+      });
+      assertEquals(22, calculator.parse(operation));
+}
+````
+
+### Arithmetic Substraction Test
+The same thing happens here as in the previous case.
+
+```java
+@Test
+@DisplayName("Arithmetic subtraction should return correct result")
+public void testArithmeticSubtraction() {
+      String operation = "10-3-2";
+      assertDoesNotThrow(() -> {
+            this.calculator.parse(operation);
+      });
+      assertEquals(5, calculator.parse(operation));
+}
+````
+
+### Mixed Operations Test
+The same thing happens here as in the two previous cases.
+
+```java
+@Test
+@DisplayName("Mixed operations (addition and subtraction) should return correct result")
+public void testMixedOperations() {
+      String operation = "10+5-2";
+      assertDoesNotThrow(() -> {
+            this.calculator.parse(operation);
+      });
+      assertEquals(13, calculator.parse(operation));
+}
+````
+
+### Parser Method
+For the main method, what was done was to reduce it (at the level of lines of code), making each case be treated with a specific method, in this way the size of the `parser` method is greatly reduced.
+
+Below is the refactored `parser` method along with the helper methods that were implemented.
+
+```java
+public int parse(String expression) {
+      if (containsInvalidCharacters(expression)) {
+            throw new NumberFormatException("The expression received is not a number.");
+      }
+      return this.evaluateExpression(expression);
+}
+````
+
+```java
+/**
+ * Checks if the expression contains invalid characters (letters).
+ * @param expression The input expression.
+ * @return true if invalid characters are found, false otherwise.
+ */
+private boolean containsInvalidCharacters(String expression) {
+      return (expression.length() == 1 && Character.isLetter(expression.charAt(0))) 
+            || (expression.length() > 1 && this.containsALetter(expression));
+}
+````
+
+```java
+/**
+ * Evaluates an arithmetic expression with addition and subtraction.
+ * Supports numbers separated by '+' or '-'.
+ * @param expression A string containing integers with '+' or '-' symbols.
+ * @return The computed result.
+ * @throws NumberFormatException If any part cannot be parsed as an integer.
+ */
+private int evaluateExpression(String expression) {
+      String[] tokens = expression.split("(?=[+-])"); // Split keeping '+'/'-' with numbers
+      int result = 0;
+      for (String token : tokens) {
+            result += Integer.parseInt(token.trim()); // Convert and sum/subtract
+      }
+      return result;
+}
+```
+
+### Test Pass
+![Refactorization](Pictures/Refactorization.png)
