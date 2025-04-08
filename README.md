@@ -5,13 +5,13 @@
 - Marc Burgos Ucendo.
 
 ## Table of Contents
-- [Expression with Only One Number](#test-only-one-number)
+- [Expression with Only One Number](#tests-only-one-number)
 - [Expression with Letters Test](#expression-with-letters-test)
 - [Expression with Multiple Letters Test](#expression-with-multiple-letters-test)
 - [Mix Numbers and Letters Test](#mix-numbers-and-letters-test)
 - [Arithmetic Sum Test](#arithmetic-sum-test)
 - [Invalid Arithmetic Sum Test](#invalid-arithmetic-sum-test)
-- [Test Substraction](#test-substraction)
+- [Test Substraction](#tests-substraction)
 - [Example 8](#example-8)
 - [Example 9](#example-9)
 - [Example 10](#example-10)
