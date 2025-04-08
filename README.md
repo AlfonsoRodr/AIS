@@ -12,16 +12,6 @@
 - [Arithmetic Sum Test](#arithmetic-sum-test)
 - [Invalid Arithmetic Sum Test](#invalid-arithmetic-sum-test)
 - [Test Substraction](#tests-substraction)
-- [Example 8](#example-8)
-- [Example 9](#example-9)
-- [Example 10](#example-10)
-- [Example 11](#example-11)
-- [Example 12](#example-12)
-- [Example 13](#example-13)
-- [Example 14](#example-14)
-- [Example 15](#example-15)
-- [Example 16](#example-16)
-- [Example 17](#example-17)
 - [Refactorization](#refactorization)
 
 >[!NOTE]
