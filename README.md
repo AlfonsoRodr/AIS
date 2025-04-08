@@ -23,20 +23,27 @@
 ### Test Code
 
 ````java
- @Test
-    public void TestOneNumber(){
-        String operation = "1";
-
-        int res = calculator.parse(operation);
-        
-        assertEquals(1, res);
-    }
+@Test
+public void TestOneNumber(){
+    String operation = "1";
+    int res = calculator.parse(operation);
+    assertEquals(1, res);
+}
 ````
 ### Test Fail
 ![Expression with OnlyNumbers](https://github.com/AlfonsoRodr/AIS/blob/DesarolloMarc/Fotos/Test1.png)
 ### Minimun Functionality
-
-![Minimun Functionality 1](https://github.com/AlfonsoRodr/AIS/blob/DesarolloMarc/Fotos/Codigo1.png)
+```java
+public int parser(String expression) {
+     int num = Integer.parseInt(expression);
+     if (num == 1) {
+        return 1;
+     }
+     else {
+       throw new IlegalArgumentException();
+     }
+}
+````
 
 ### Every Test Pass
 ![Test Pass1](https://github.com/AlfonsoRodr/AIS/blob/DesarolloMarc/Fotos/Testcheck1.png)
@@ -45,20 +52,32 @@
 
 ### Test Code
 ````java
- @Test
-    public void TestOneNumber(){
-        String operation = "2";
-
-        int res = calculator.parse(operation);
-        
-        assertEquals(2, res);
-    }
+@Test
+public void TestOneNumber(){
+      String operation = "2";
+      int res = calculator.parse(operation);
+      assertEquals(2, res);
+}
 ````
 ### Test Fail
+**CAMBIAR A FORMATO TEXTO**
 ![Expression with OnlyNumbers](https://github.com/AlfonsoRodr/AIS/blob/DesarolloMarc/Fotos/Test2.png)
 ### Minimun Functionality
 
-![Minimun Functionality 1](https://github.com/AlfonsoRodr/AIS/blob/DesarolloMarc/Fotos/Codigo2.png)
+````java
+public int parser(String expression) {
+     int num = Integer.parseInt(expression);
+     if (num == 1) {
+        return 1;
+     }
+     else if (num == 2) {
+        return 2;
+     }
+     else {
+       throw new IlegalArgumentException();
+     }
+}
+````
 
 ### Every Test Pass
 ![Test Pass1](https://github.com/AlfonsoRodr/AIS/blob/DesarolloMarc/Fotos/TestCheck2.png)
@@ -67,22 +86,36 @@
 
 ### Test Code
 ````java
- @Test
-    public void TestOneNumber(){
-        String operation = "3";
-
-        int res = calculator.parse(operation);
-        
-        assertEquals(3, res);
-    }
+@Test
+public void TestOneNumber(){
+      String operation = "3";
+      int res = calculator.parse(operation);
+      assertEquals(3, res);
+}
 ````
 ### Test Fail
 ![Expression with OnlyNumbers](https://github.com/AlfonsoRodr/AIS/blob/DesarolloMarc/Fotos/Test3.png)
 ### Minimun Functionality
-
-![Minimun Functionality 1](https://github.com/AlfonsoRodr/AIS/blob/DesarolloMarc/Fotos/Codigo3.png)
+````java
+public int parser(String expression) {
+     int num = Integer.parseInt(expression);
+     if (num == 1) {
+        return 1;
+     }
+     else if (num == 2) {
+        return 2;
+     }
+     else if (num == 3) {
+        return 3;
+     }
+     else {
+       throw new IlegalArgumentException();
+     }
+}
+````
 
 ### Every Test Pass
+**CAMBIAR A FORMATO TEXTO**
 ![Test Pass1](https://github.com/AlfonsoRodr/AIS/blob/DesarolloMarc/Fotos/TestCheck3.png)
 
 ## Expression with Letters Test
@@ -284,7 +317,6 @@ public void invalidAritmethicSumTest() {
 ### Test Pass
 ![Invalid Arithmetic Sum Test](Pictures/InvalidArithmeticSumTest.png)
 
-
 ## Tests Substraction  
 
 ### Tests Substraction 1
@@ -292,22 +324,21 @@ public void invalidAritmethicSumTest() {
 ### Test Code
 
 ````java
- @Test
-    public void TestSubstractNumber1(){
-        String operation = "5 - 3";
-
-        int res = calculator.parse(operation);
-        
-        assertEquals(2, res);
-    }
+@Test
+public void TestSubstractNumber1(){
+      String operation = "5 - 3";
+      int res = calculator.parse(operation);
+      assertEquals(2, res);
+}
 ````
 ### Test Fail
 ![Test Substraction](https://github.com/AlfonsoRodr/AIS/blob/DesarolloMarc/Fotos/TestResta1.png)
 ### Minimun Functionality
-
+**CAMBIAR A FORMATO TEXTO**
 ![Code Substarction 1](https://github.com/AlfonsoRodr/AIS/blob/DesarolloMarc/Fotos/CodigoResta1.png)
 
 ### Every Test Pass
+**CAMBIAR A FORMATO TEXTO**
 ![Test SubstractionPass1](https://github.com/AlfonsoRodr/AIS/blob/DesarolloMarc/Fotos/TestRestaCheck1.png)
 
 ### Tests Substraction 2
@@ -316,21 +347,20 @@ public void invalidAritmethicSumTest() {
 
 ````java
 @Test
-    public void TestSubstractNumber2(){
-        String operation =  "1 - 2" ;
-
-        int res = calculator.parse(operation);
-        
-        assertEquals(-1, res);
-    }
+public void TestSubstractNumber2(){
+      String operation =  "1 - 2" ;
+      int res = calculator.parse(operation);
+      assertEquals(-1, res);
+}
 ````
 ### Test Fail
 ![Test Substraction2](https://github.com/AlfonsoRodr/AIS/blob/DesarolloMarc/Fotos/TestResta2.png)
 ### Minimun Functionality
-
+**CAMBIAR A FORMATO TEXTO**
 ![Code Substarction 2](https://github.com/AlfonsoRodr/AIS/blob/DesarolloMarc/Fotos/CodigoResta2.png)
 
 ### Every Test Pass
+**CAMBIAR A FORMATO TEXTO**
 ![Test SubstractionPass2](https://github.com/AlfonsoRodr/AIS/blob/DesarolloMarc/Fotos/TestRestaCheck2.png)
 
 ### Tests Substraction 3
@@ -338,22 +368,21 @@ public void invalidAritmethicSumTest() {
 ### Test Code
 
 ````java
- @Test
-    public void TestSubstractNumber3(){
-        String operation =  "7 - 2 - 1" ;
-
-        int res = calculator.parse(operation);
-        
-        assertEquals(4, res);
-    }
+@Test
+public void TestSubstractNumber3(){
+      String operation =  "7 - 2 - 1" ;
+      int res = calculator.parse(operation);
+      assertEquals(4, res);
+}
 ````
 ### Test Fail
 ![Test Substraction3](https://github.com/AlfonsoRodr/AIS/blob/DesarolloMarc/Fotos/TestResta3.png)
 ### Minimun Functionality
-
+**CAMBIAR A FORMATO TEXTO**
 ![Code Substarction 3](https://github.com/AlfonsoRodr/AIS/blob/DesarolloMarc/Fotos/CodigoResta3.png)
 
 ### Every Test Pass
+**CAMBIAR A FORMATO TEXTO**
 ![Test SubstractionPass3](https://github.com/AlfonsoRodr/AIS/blob/DesarolloMarc/Fotos/TestRestaCheck3.png)
 
 
@@ -468,16 +497,3 @@ private int evaluateExpression(String expression) {
 
 ### Test Pass
 ![Refactorization](Pictures/Refactorization.png)
-
-
-
-
-
-
-
-
-
-
-
-
-
