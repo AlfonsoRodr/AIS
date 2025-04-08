@@ -5,12 +5,13 @@
 - Marc Burgos Ucendo.
 
 ## Table of Contents
+- [Expression with Only One Number](#test-only-one-number)
 - [Expression with Letters Test](#expression-with-letters-test)
 - [Expression with Multiple Letters Test](#expression-with-multiple-letters-test)
 - [Mix Numbers and Letters Test](#mix-numbers-and-letters-test)
 - [Arithmetic Sum Test](#arithmetic-sum-test)
 - [Invalid Arithmetic Sum Test](#invalid-arithmetic-sum-test)
-- [Example 7](#example-7)
+- [Test Substraction](#test-substraction)
 - [Example 8](#example-8)
 - [Example 9](#example-9)
 - [Example 10](#example-10)
@@ -25,6 +26,74 @@
 
 >[!NOTE]
 > Since all tests are intended to test the functionality of a single method, the refactoring of both the tests and the parser method will be shown in a separate section, showing the refactorings together along with proof that all the tests pass.
+## Tests Only One Number 
+
+### Tests Only One Number 1
+
+### Test Code
+
+````java
+ @Test
+    public void TestOneNumber(){
+        String operation = "1";
+
+        int res = calculator.parse(operation);
+        
+        assertEquals(1, res);
+    }
+````
+### Test Fail
+![Expression with OnlyNumbers](https://github.com/AlfonsoRodr/AIS/blob/DesarolloMarc/Fotos/Test1.png)
+### Minimun Functionality
+
+![Minimun Functionality 1](https://github.com/AlfonsoRodr/AIS/blob/DesarolloMarc/Fotos/Codigo1.png)
+
+### Every Test Pass
+![Test Pass1](https://github.com/AlfonsoRodr/AIS/blob/DesarolloMarc/Fotos/Testcheck1.png)
+
+### Tests Only One Number 2
+
+### Test Code
+````java
+ @Test
+    public void TestOneNumber(){
+        String operation = "2";
+
+        int res = calculator.parse(operation);
+        
+        assertEquals(2, res);
+    }
+````
+### Test Fail
+![Expression with OnlyNumbers](https://github.com/AlfonsoRodr/AIS/blob/DesarolloMarc/Fotos/Test2.png)
+### Minimun Functionality
+
+![Minimun Functionality 1](https://github.com/AlfonsoRodr/AIS/blob/DesarolloMarc/Fotos/Codigo2.png)
+
+### Every Test Pass
+![Test Pass1](https://github.com/AlfonsoRodr/AIS/blob/DesarolloMarc/Fotos/TestCheck2.png)
+
+### Tests Only One Number 3
+
+### Test Code
+````java
+ @Test
+    public void TestOneNumber(){
+        String operation = "3";
+
+        int res = calculator.parse(operation);
+        
+        assertEquals(3, res);
+    }
+````
+### Test Fail
+![Expression with OnlyNumbers](https://github.com/AlfonsoRodr/AIS/blob/DesarolloMarc/Fotos/Test3.png)
+### Minimun Functionality
+
+![Minimun Functionality 1](https://github.com/AlfonsoRodr/AIS/blob/DesarolloMarc/Fotos/Codigo3.png)
+
+### Every Test Pass
+![Test Pass1](https://github.com/AlfonsoRodr/AIS/blob/DesarolloMarc/Fotos/TestCheck3.png)
 
 ## Expression with Letters Test
 
@@ -225,6 +294,79 @@ public void invalidAritmethicSumTest() {
 ### Test Pass
 ![Invalid Arithmetic Sum Test](Pictures/InvalidArithmeticSumTest.png)
 
+
+## Tests Substraction  
+
+### Tests Substraction 1
+
+### Test Code
+
+````java
+ @Test
+    public void TestSubstractNumber1(){
+        String operation = "5 - 3";
+
+        int res = calculator.parse(operation);
+        
+        assertEquals(2, res);
+    }
+````
+### Test Fail
+![Test Substraction](https://github.com/AlfonsoRodr/AIS/blob/DesarolloMarc/Fotos/TestResta1.png)
+### Minimun Functionality
+
+![Code Substarction 1](https://github.com/AlfonsoRodr/AIS/blob/DesarolloMarc/Fotos/CodigoResta1.png)
+
+### Every Test Pass
+![Test SubstractionPass1](https://github.com/AlfonsoRodr/AIS/blob/DesarolloMarc/Fotos/TestRestaCheck1.png)
+
+### Tests Substraction 2
+
+### Test Code
+
+````java
+@Test
+    public void TestSubstractNumber2(){
+        String operation =  "1 - 2" ;
+
+        int res = calculator.parse(operation);
+        
+        assertEquals(-1, res);
+    }
+````
+### Test Fail
+![Test Substraction2](https://github.com/AlfonsoRodr/AIS/blob/DesarolloMarc/Fotos/TestResta2.png)
+### Minimun Functionality
+
+![Code Substarction 2](https://github.com/AlfonsoRodr/AIS/blob/DesarolloMarc/Fotos/CodigoResta2.png)
+
+### Every Test Pass
+![Test SubstractionPass2](https://github.com/AlfonsoRodr/AIS/blob/DesarolloMarc/Fotos/TestRestaCheck2.png)
+
+### Tests Substraction 3
+
+### Test Code
+
+````java
+ @Test
+    public void TestSubstractNumber3(){
+        String operation =  "7 - 2 - 1" ;
+
+        int res = calculator.parse(operation);
+        
+        assertEquals(4, res);
+    }
+````
+### Test Fail
+![Test Substraction3](https://github.com/AlfonsoRodr/AIS/blob/DesarolloMarc/Fotos/TestResta3.png)
+### Minimun Functionality
+
+![Code Substarction 3](https://github.com/AlfonsoRodr/AIS/blob/DesarolloMarc/Fotos/CodigoResta3.png)
+
+### Every Test Pass
+![Test SubstractionPass3](https://github.com/AlfonsoRodr/AIS/blob/DesarolloMarc/Fotos/TestRestaCheck3.png)
+
+
 ## Refactorization
 Next, we will show the refactorings that were made in the `CalculatorParser` class and in `CalculatorParserTest`.
 >[!NOTE]
@@ -336,3 +478,16 @@ private int evaluateExpression(String expression) {
 
 ### Test Pass
 ![Refactorization](Pictures/Refactorization.png)
+
+
+
+
+
+
+
+
+
+
+
+
+
