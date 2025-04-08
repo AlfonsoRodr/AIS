@@ -31,7 +31,13 @@ public void TestOneNumber(){
 }
 ````
 ### Test Fail
-![Expression with OnlyNumbers](https://github.com/AlfonsoRodr/AIS/blob/DesarolloMarc/Fotos/Test1.png)
+```log
+java.lang.IllegalArgumentException
+ at es.codeurjc.test.CalculatorParser.parse(CalculatorParser.java:15)
+ at es.codeurjc.test.CalculatorParserTest.TestOneNumber(CalculatorParserTest.java:18)
+ at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+ at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+````
 ### Minimun Functionality
 ```java
 public int parser(String expression) {
@@ -60,8 +66,13 @@ public void TestOneNumber(){
 }
 ````
 ### Test Fail
-**CAMBIAR A FORMATO TEXTO**
-![Expression with OnlyNumbers](https://github.com/AlfonsoRodr/AIS/blob/DesarolloMarc/Fotos/Test2.png)
+```log
+java.lang.IllegalArgumentException
+ at es.codeurjc.test.CalculatorParser.parse(CalculatorParser.java:15)
+ at es.codeurjc.test.CalculatorParserTest.TestOneNumber2(CalculatorParserTest.java:26)
+ at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+ at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+````
 ### Minimun Functionality
 
 ````java
@@ -94,7 +105,13 @@ public void TestOneNumber(){
 }
 ````
 ### Test Fail
-![Expression with OnlyNumbers](https://github.com/AlfonsoRodr/AIS/blob/DesarolloMarc/Fotos/Test3.png)
+```log
+java.lang.IllegalArgumentException
+ at es.codeurjc.test.CalculatorParser.parse(CalculatorParser.java:15)
+ at es.codeurjc.test.CalculatorParserTest.TestOneNumber3(CalculatorParserTest.java:34)
+ at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+ at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+````
 ### Minimun Functionality
 ````java
 public int parser(String expression) {
@@ -332,7 +349,13 @@ public void TestSubstractNumber1(){
 }
 ````
 ### Test Fail
-![Test Substraction](https://github.com/AlfonsoRodr/AIS/blob/DesarolloMarc/Fotos/TestResta1.png)
+```log
+java.lang.IllegalArgumentException
+ at es.codeurjc.test.CalculatorParser.parse(CalculatorParser.java:10)
+ at es.codeurjc.test.CalculatorParserTest.TestSubstractNumber1(CalculatorParserTest.java:42)
+ at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+ at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+````
 ### Minimun Functionality
 ````java
  public int parse(String expression){
@@ -370,7 +393,14 @@ public void TestSubstractNumber2(){
 }
 ````
 ### Test Fail
-![Test Substraction2](https://github.com/AlfonsoRodr/AIS/blob/DesarolloMarc/Fotos/TestResta2.png)
+```log
+java.lang.IllegalArgumentException
+ at es.codeurjc.test.CalculatorParser.parse(CalculatorParser.java:10)
+ at es.codeurjc.test.CalculatorParserTest.TestSubstractNumber2(CalculatorParserTest.java:50)
+ at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+ at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+
+````
 ### Minimun Functionality
 ````java
  public int parse(String expression) {
@@ -409,7 +439,13 @@ public void TestSubstractNumber3(){
 }
 ````
 ### Test Fail
-![Test Substraction3](https://github.com/AlfonsoRodr/AIS/blob/DesarolloMarc/Fotos/TestResta3.png)
+```log
+java.lang.IllegalArgumentException
+ at es.codeurjc.test.CalculatorParser.parse(CalculatorParser.java:10)
+ at es.codeurjc.test.CalculatorParserTest.TestSubstractNumber3(CalculatorParserTest.java:58)
+ at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+ at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+````
 ### Minimun Functionality
 ````java
 public int parse(String expression) {
