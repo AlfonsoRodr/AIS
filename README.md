@@ -334,11 +334,27 @@ public void TestSubstractNumber1(){
 ### Test Fail
 ![Test Substraction](https://github.com/AlfonsoRodr/AIS/blob/DesarolloMarc/Fotos/TestResta1.png)
 ### Minimun Functionality
-**CAMBIAR A FORMATO TEXTO**
-![Code Substarction 1](https://github.com/AlfonsoRodr/AIS/blob/DesarolloMarc/Fotos/CodigoResta1.png)
+````java
+ public int parse(String expression){
+        if(expression.length() == 1){
+            int num = Integer.parseInt(expression);
+            return num;
+        } else {
+            String[] split = expression.split(" ");
+            int num1 = Integer.parseInt(split[0]);
+            String operator = split[1];
+            int num2 = Integer.parseInt(split[2]);
+            if(operator.equals("-")){
+                return num1 - num2;
+            } else {
+                throw new IllegalArgumentException();
+            }
+        }
+    }
+````
 
 ### Every Test Pass
-**CAMBIAR A FORMATO TEXTO**
+
 ![Test SubstractionPass1](https://github.com/AlfonsoRodr/AIS/blob/DesarolloMarc/Fotos/TestRestaCheck1.png)
 
 ### Tests Substraction 2
@@ -356,11 +372,28 @@ public void TestSubstractNumber2(){
 ### Test Fail
 ![Test Substraction2](https://github.com/AlfonsoRodr/AIS/blob/DesarolloMarc/Fotos/TestResta2.png)
 ### Minimun Functionality
-**CAMBIAR A FORMATO TEXTO**
-![Code Substarction 2](https://github.com/AlfonsoRodr/AIS/blob/DesarolloMarc/Fotos/CodigoResta2.png)
-
+````java
+ public int parse(String expression) {
+        if (expression.length() == 1) {
+            int num = Integer.parseInt(expression);
+            return num;
+        } else {
+            String[] split = expression.split(" ");
+            int num1 = Integer.parseInt(split[0]);
+            String operator = split[1];
+            int num2 = Integer.parseInt(split[2]);
+            if ((operator.equals("-")) && (num1 == 5) && (num2 == 3)) {
+                return 2;
+            } else if ((operator.equals("-")) && (num1 == 1) && (num2 == 2)) {
+                return -1;
+            } else {
+                throw new IllegalArgumentException();
+            }
+        }
+    }
+````
 ### Every Test Pass
-**CAMBIAR A FORMATO TEXTO**
+
 ![Test SubstractionPass2](https://github.com/AlfonsoRodr/AIS/blob/DesarolloMarc/Fotos/TestRestaCheck2.png)
 
 ### Tests Substraction 3
@@ -378,11 +411,40 @@ public void TestSubstractNumber3(){
 ### Test Fail
 ![Test Substraction3](https://github.com/AlfonsoRodr/AIS/blob/DesarolloMarc/Fotos/TestResta3.png)
 ### Minimun Functionality
-**CAMBIAR A FORMATO TEXTO**
-![Code Substarction 3](https://github.com/AlfonsoRodr/AIS/blob/DesarolloMarc/Fotos/CodigoResta3.png)
+````java
+public int parse(String expression) {
+        if (expression.length() == 1) {
+            int num = Integer.parseInt(expression);
+            return num;
+        } else {
+            String[] split = expression.split(" ");
+            int num1 = Integer.parseInt(split[0]);
+            String operator = split[1];
+            int num2 = Integer.parseInt(split[2]);
+            if ((operator.equals("-")) && (num1 == 5) && (num2 == 3)) {
+                return 2;
+            } else if ((operator.equals("-")) && (num1 == 1) && (num2 == 2)) {
+                return -1;
+            } else {
+                return resta(expression);
+            }
+        }
+    }
 
+    public static int resta(String str) {
+        String[] tokens = str.split(" - ");
+        int res = Integer.parseInt(tokens[0]);
+
+        for (int i = 1; i < tokens.length; i++) {
+            res -= Integer.parseInt(tokens[i]);
+        }
+
+        return res;
+    }
+
+````
 ### Every Test Pass
-**CAMBIAR A FORMATO TEXTO**
+
 ![Test SubstractionPass3](https://github.com/AlfonsoRodr/AIS/blob/DesarolloMarc/Fotos/TestRestaCheck3.png)
 
 
