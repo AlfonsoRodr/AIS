@@ -211,7 +211,7 @@ public int parse(String expression) {
 }
 ````
 
-### Test Pass
+### Every Test Pass
 ![Expresion with Multiple Letters Test](Pictures/ExpressionWithMultipleLetters.png)
 
 ## Mix Numbers and Letters Test
@@ -267,7 +267,7 @@ public int parse(String expression) {
     }
 }
 ````
-### Test Pass
+### Every Test Pass
 ![Mix Numbers and Letters Test](Pictures/MixNumbersWithLetters.png)
 
 ## Arithmetic Sum Test
@@ -311,7 +311,7 @@ public int parse(String expression) {
 }
 ````
 
-### Test Pass
+### Every Test Pass
 ![Arithmetic Sum Test](Pictures/ArithmethicSumTest.png)
 
 ## Invalid Arithmetic Sum Test
@@ -331,7 +331,7 @@ public void invalidAritmethicSumTest() {
 >[!NOTE]
 > Since this case has been addressed in the [Expression with Multiple Letters Test](#expression-with-multiple-letters-test), the test passes without implementing any functionality.
 
-### Test Pass
+### Every Test Pass
 ![Invalid Arithmetic Sum Test](Pictures/InvalidArithmeticSumTest.png)
 
 ## Tests Substraction  
@@ -593,5 +593,5 @@ private int evaluateExpression(String expression) {
 }
 ```
 
-### Test Pass
+### Every Test Pass
 ![Refactorization](Pictures/Refactorization.png)
