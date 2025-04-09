@@ -3,7 +3,7 @@ package es.codeurjc.test;
 public class CalculatorParser {
 
     public int parse(String expression) {
-        if (containsInvalidCharacters(expression)) {
+        if (this.containsInvalidCharacters(expression)) {
             throw new NumberFormatException("The expression received is not a number.");
         }
         return this.evaluateExpression(expression);
