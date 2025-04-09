@@ -52,7 +52,7 @@ public int parser(String expression) {
 ````
 
 ### Every Test Pass
-![Test Pass1](https://github.com/AlfonsoRodr/AIS/blob/DesarolloMarc/Fotos/Testcheck1.png)
+![Test Pass1](https://github.com/AlfonsoRodr/AIS/blob/main/Pictures/Testcheck1.png)
 
 ### Tests Only One Number 2
 
@@ -91,7 +91,7 @@ public int parser(String expression) {
 ````
 
 ### Every Test Pass
-![Test Pass1](https://github.com/AlfonsoRodr/AIS/blob/DesarolloMarc/Fotos/TestCheck2.png)
+![Test Pass1](https://github.com/AlfonsoRodr/AIS/blob/main/Pictures/TestCheck2.png)
 
 ### Tests Only One Number 3
 
@@ -132,8 +132,8 @@ public int parser(String expression) {
 ````
 
 ### Every Test Pass
-**CAMBIAR A FORMATO TEXTO**
-![Test Pass1](https://github.com/AlfonsoRodr/AIS/blob/DesarolloMarc/Fotos/TestCheck3.png)
+
+![Test Pass1](https://github.com/AlfonsoRodr/AIS/blob/main/Pictures/TestCheck3.png)
 
 ## Expression with Letters Test
 
@@ -378,7 +378,7 @@ java.lang.IllegalArgumentException
 
 ### Every Test Pass
 
-![Test SubstractionPass1](https://github.com/AlfonsoRodr/AIS/blob/DesarolloMarc/Fotos/TestRestaCheck1.png)
+![Test SubstractionPass1](https://github.com/AlfonsoRodr/AIS/blob/main/Pictures/TestRestaCheck1.png)
 
 ### Tests Substraction 2
 
@@ -424,7 +424,7 @@ java.lang.IllegalArgumentException
 ````
 ### Every Test Pass
 
-![Test SubstractionPass2](https://github.com/AlfonsoRodr/AIS/blob/DesarolloMarc/Fotos/TestRestaCheck2.png)
+![Test SubstractionPass2](https://github.com/AlfonsoRodr/AIS/blob/main/Pictures/TestRestaCheck2.png)
 
 ### Tests Substraction 3
 
@@ -481,7 +481,7 @@ public int parse(String expression) {
 ````
 ### Every Test Pass
 
-![Test SubstractionPass3](https://github.com/AlfonsoRodr/AIS/blob/DesarolloMarc/Fotos/TestRestaCheck3.png)
+![Test SubstractionPass3](https://github.com/AlfonsoRodr/AIS/blob/main/Pictures/TestRestaCheck3.png)
 
 
 ## Refactorization
