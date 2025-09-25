@@ -1,0 +1,47 @@
+Informe de Experimento con AlgorEx
+
+Asignatura: Algoritmos Avanzados
+Problema seleccionado: Mochila 0-1
+Fecha de realización: 25 de octubre de 2025
+
+a) Problema de optimización seleccionado
+
+El problema trabajado es la Mochila 0-1. Se trata de un problema clásico de optimización combinatoria, donde dado un conjunto de objetos con un peso y un beneficio asociado, y una mochila con capacidad limitada, se debe seleccionar un subconjunto de objetos que maximice el beneficio total sin superar la capacidad.
+
+b) Rangos de valores usados para la generación aleatoria de los datos de entrada
+
+En la tabla de datos generados (captura 3) se observa que:
+
+Los pesos (ps) y beneficios (bs) se han generado con valores enteros entre aproximadamente 1 y 20.
+
+La capacidad de la mochila (c) varía entre 4 y 20, lo que da lugar a distintos escenarios de dificultad.
+
+Estos valores permiten evaluar el comportamiento de los algoritmos tanto en mochilas con baja capacidad como en otras más amplias.
+
+c) Conclusión sobre métodos exactos o inexactos según los resultados
+
+A partir de la comparación de métodos (captura 2):
+
+mochila01_PD (programación dinámica) y mochila01_back (búsqueda exhaustiva/backtracking) han mostrado resultados exactos en todas las ejecuciones.
+
+mochila01_aprox (aproximado) también coincide con los resultados óptimos en varios casos, aunque en algunos difiere en beneficio.
+
+mochila01_voraz (greedy/heurístico) es el que presenta más casos subóptimos. Tal como se observa en la gráfica (captura 1), alrededor del 20% de las ejecuciones no alcanzan el valor óptimo.
+
+En conclusión:
+
+Los métodos exactos son PD y Backtracking.
+
+Los métodos inexactos son Aproximado y Voraz, siendo este último el más impreciso.
+
+d) Evidencias
+
+En la tabla de resultados numéricos (captura 2), se comparan los beneficios obtenidos por cada algoritmo para 10 ejecuciones distintas. Se observan diferencias en varios casos entre el valor óptimo (PD/Backtracking) y el obtenido por los algoritmos Aproximado y Voraz.
+
+En el resumen gráfico (captura 1), el histograma de resultados muestra que el algoritmo voraz consigue soluciones óptimas en un 80% de los casos, pero en un 20% cae en subóptimos. Los algoritmos exactos logran el 100% de soluciones óptimas.
+
+El diagrama de caja confirma que los valores obtenidos por los algoritmos inexactos tienden a estar próximos al óptimo, aunque con desviaciones en algunos escenarios.
+
+e) Incidencias
+
+Durante el experimento no se han encontrado incidencias técnicas significativas, aunque interpretar las tablas de resultados y relacionarlas con las gráficas requirió algo de tiempo.
